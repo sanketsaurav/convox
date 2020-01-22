@@ -16,6 +16,8 @@
 
 ## Install Convox
 
+Install a local Rack named `dev`.
+
     $ convox rack install local dev
 
 ## DNS Setup
