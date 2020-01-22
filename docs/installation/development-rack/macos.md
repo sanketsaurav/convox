@@ -18,13 +18,13 @@
 
 ## Install Rack
 
-    $ convox rack install local development
+    $ convox rack install local dev
 
 ## DNS Setup
 
 Set `*.convox` to be resolved by the local Rack's DNS server.
 
-    $ sudo mkdir -p /etc/resolver`
+    $ sudo mkdir -p /etc/resolver
     $ sudo bash -c 'echo "nameserver 127.0.0.1" > /etc/resolver/convox'
 
 ## CA Trust (optional)
