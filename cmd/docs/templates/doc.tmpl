@@ -1,0 +1,39 @@
+{{ define "head" }}
+  <meta property="og:description" content="{{.Description}}">
+  <meta property="og:image" content="https://convox.com/assets/images/logo.png">
+  <meta property="og:site_name" content="Convox Docs">
+  <meta property="og:title" content="{{.Title}}">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="{{.URL}}">
+
+  <meta name="twitter:description" content="{{.Description}}">
+  <meta name="twitter:image" content="https://convox.com/assets/images/logo.png">
+  <meta name="twitter:site" content="@goconvox">
+  <meta name="twitter:title" content="{{.Title}}">
+
+  {{ range .Tags }}
+    <meta property="article:tag" content="{{.}}">
+  {{ end }}
+{{ end }}
+
+{{ define "content" }}
+
+  {{ with .Deprecation }}
+    <div class="block-callout block-show-callout type-warning"><p>{{.}}</p></div>
+  {{ end }}
+
+  {{ if .Body }}
+    <h1 style="float:right; font-size: 1.3em; margin-top: 10px; margin-bottom: 0;" class="title-category-name">
+      {{ join " » " .Breadcrumbs }}
+    </h1>
+  {{ end }}
+
+  {{ .Body }}
+
+  <div id="footer">
+    We welcome
+    <a href="https://github.com/convox/convox/edit/master/docs/{{.Slug}}.md">suggested changes</a>
+    to this document.
+  </div>
+
+{{ end }}

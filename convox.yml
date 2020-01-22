@@ -1,0 +1,10 @@
+services:
+  docs:
+    command: bin/docs
+    environment:
+      - ALGOLIA_APP
+      - ALGOLIA_INDEX
+      - ALGOLIA_KEY_ADMIN
+      - ALGOLIA_KEY_SEARCH
+    health: /check
+    port: https:3000
