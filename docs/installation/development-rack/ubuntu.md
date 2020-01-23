@@ -1,6 +1,8 @@
 # Ubuntu
 
-## Install Kubernetes
+## Initial Setup
+
+### Kubernetes
 
     $ snap install microk8s --classic --channel=1.13/stable
     $ microk8s.enable dns storage
@@ -8,13 +10,13 @@
     $ microk8s.config > ~/.kube/config
     $ sudo snap restart microk8s
 
-## Install CLI
+### Convox CLI
 
     $ curl -L https://github.com/convox/convox/releases/latest/download/convox-linux -o /tmp/convox
     $ sudo mv /tmp/convox /usr/local/bin/convox
     $ sudo chmod 755 /usr/local/bin/convox
 
-## Install Convox
+## Installation
 
 Install a local Rack named `dev`.
 

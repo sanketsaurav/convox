@@ -1,6 +1,8 @@
 # macOS
 
-## Install Kubernetes
+## Initial Setup
+
+### Kubernetes
 
 - Install [Docker Desktop](https://www.docker.com/products/docker-desktop)
 - Go to Docker Desktop Preferences
@@ -10,13 +12,13 @@
 - Go to the Kubernetes tab
 - Enable Kubernetes
 
-## Install CLI
+### Convox CLI
 
     $ curl -L https://github.com/convox/convox/releases/latest/download/convox-macos -o /tmp/convox
     $ sudo mv /tmp/convox /usr/local/bin/convox
     $ sudo chmod 755 /usr/local/bin/convox
 
-## Install Rack
+## Installation
 
 Install a local Rack named `dev`.
 
